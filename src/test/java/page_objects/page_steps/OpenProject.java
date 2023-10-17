@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import page_objects.page_elements.HomePage;
 
 import static page_objects.page_steps.InputFieldClickButton.buttonClick;
-import static util.Config.getProperties;
-import static web_hooks.WebHooks.saveScreenshot;
+import static page_objects.web_hooks.WebHooks.saveScreenshot;
 
 public class OpenProject extends HomePage {
 

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static page_objects.page_elements.EdujiraStartPage.bodyStartPage;
-import static web_hooks.WebHooks.saveScreenshot;
+import static page_objects.web_hooks.WebHooks.saveScreenshot;
 
 public class OpenUrl {
 
@@ -16,7 +16,6 @@ public class OpenUrl {
         open(url);
         getWebDriver().manage().window().maximize();
         saveScreenshot("Открываем сайт: " + url + "и проверяем наличие Body");
-
         Assertions.assertTrue(bodyStartPage.shouldBe(Condition.visible).exists(), "На странице отсутствует Body.");
     }
 }

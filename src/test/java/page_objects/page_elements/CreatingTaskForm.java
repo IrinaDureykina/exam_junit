@@ -15,8 +15,6 @@ public class CreatingTaskForm {
 
     public static SelenideElement messageIssueKey = $x(" //div[contains(text(),'Запрос ')]/a");
 
-    public static SelenideElement messageDescription = $x("//html/body[@id='tinymce' and @data-id='mce_12']");
-
     public static SelenideElement fixVersionSelector = $x("//label[contains(text(),'Исправить в версиях')]//following-sibling::select//descendant::option[@value='10000']");
 
     public static SelenideElement priorityselector = $x("//input[@aria-label='Приоритет']");
@@ -34,10 +32,6 @@ public class CreatingTaskForm {
     public static SelenideElement taskSlector = $x("(//ul[@id=\"поиск-по-истории\"]//a)[3]");
 
     public static SelenideElement appointMeButton = $x("//button[contains(text(),'Назначить меня')]");
-
-    public static SelenideElement sprintSlectorClik = $x("//div[@class='field-group']/label[contains(text(),'Спринт')]//following-sibling::div/div/span");
-
-    public static SelenideElement sprintSlector = $x(" (//ul[@id='предложения']/li[contains(@id,'доска-спринт')]/a)[1]");
 
     public static SelenideElement returnFrameField = $x("//body[@id='tinymce']/p");
 

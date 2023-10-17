@@ -8,8 +8,7 @@ import page_objects.page_elements.CreatingTaskForm;
 import static page_objects.page_elements.BrowseTaskPage.*;
 import static page_objects.page_elements.HomePage.*;
 import static page_objects.page_steps.InputFieldClickButton.*;
-import static util.Config.getProperties;
-import static web_hooks.WebHooks.saveScreenshot;
+import static page_objects.web_hooks.WebHooks.saveScreenshot;
 
 public class CreatingTask extends CreatingTaskForm {
 
@@ -37,7 +36,6 @@ public class CreatingTask extends CreatingTaskForm {
         saveScreenshot("Создаем задачу с типом: " + issueType + " и темой " + issueSummaryValue);
         messageIssueKey.shouldBe(Condition.visible);
         Assertions.assertTrue(messageIssueKey.is(Condition.visible), "Задача не создана");
-
     }
 
     @Step("Переводим созданную задачу по статусам.")
@@ -61,5 +59,4 @@ public class CreatingTask extends CreatingTaskForm {
         saveScreenshot("Переводим созданную задачу по статусам.");
         Assertions.assertEquals("Готово", taskStatus.getOwnText(), "Не верный статус задачи");
     }
-
 }

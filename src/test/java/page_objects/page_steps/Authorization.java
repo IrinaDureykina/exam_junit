@@ -9,8 +9,7 @@ import static io.qameta.allure.Allure.step;
 import static page_objects.page_elements.HomePage.*;
 import static page_objects.page_steps.InputFieldClickButton.buttonClick;
 import static page_objects.page_steps.InputFieldClickButton.inputField;
-import static util.Config.getProperties;
-import static web_hooks.WebHooks.saveScreenshot;
+import static page_objects.web_hooks.WebHooks.saveScreenshot;
 
 public class Authorization extends EdujiraStartPage {
 
@@ -20,9 +19,7 @@ public class Authorization extends EdujiraStartPage {
             inputField(inputPassword, password, "Пароль", false);
             buttonClick(battonLogin, "Кнопка 'Войти'");
             saveScreenshot("Вводим имя прользователя: " + login + ", вводим пароль: " + password + " и нажимаем Войти");
-
         });
-
     }
 
     @Step("Заходим в профиль")
@@ -34,7 +31,7 @@ public class Authorization extends EdujiraStartPage {
 
     @Step("Сверяем имя профиля с введенным {login}")
     public static void authorizationCheck(String login) {
-        saveScreenshot("Сверяем имя профиля с введенным: "+ login);
+        saveScreenshot("Сверяем имя профиля с введенным: " + login);
         Assertions.assertEquals(nameUser.shouldBe(Condition.visible).getOwnText(), login, "Не авторизованы");
     }
 }

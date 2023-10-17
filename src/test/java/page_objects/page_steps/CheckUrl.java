@@ -8,7 +8,7 @@ import page_objects.page_elements.EdujiraStartPage;
 
 import java.util.Objects;
 
-import static web_hooks.WebHooks.saveScreenshot;
+import static page_objects.web_hooks.WebHooks.saveScreenshot;
 
 
 public class CheckUrl extends EdujiraStartPage {

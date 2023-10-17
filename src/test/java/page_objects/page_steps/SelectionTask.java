@@ -8,8 +8,7 @@ import static page_objects.page_elements.BrowseTaskPage.taskStatus;
 import static page_objects.page_elements.BrowseTaskPage.taskVersions;
 import static page_objects.page_steps.InputFieldClickButton.buttonClick;
 import static page_objects.page_steps.InputFieldClickButton.inputField;
-import static util.Config.getProperties;
-import static web_hooks.WebHooks.saveScreenshot;
+import static page_objects.web_hooks.WebHooks.saveScreenshot;
 
 public class SelectionTask extends HomePage {
 
@@ -24,7 +23,6 @@ public class SelectionTask extends HomePage {
     }
 
     public static void selectedTaskCheck(String statusTask, String affectVersion) {
-
 
         step("Сверяем статус задачи с: "+statusTask+" и поле Затронуты версии: " +affectVersion, () -> {
             saveScreenshot("Сверяем статус задачи с: " + statusTask + " и поле Затронуты версии: "+ affectVersion);
