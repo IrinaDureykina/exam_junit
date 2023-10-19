@@ -10,7 +10,6 @@ public class CreatingTaskForm {
 
     public static SelenideElement issueSummary = $x(" //input[@id='summary' and @name='summary']");
 
-
     public static SelenideElement CreateIssueButton = $x(" //input[@id='create-issue-submit' and @value='Создать']");
 
     public static SelenideElement messageIssueKey = $x(" //div[contains(text(),'Запрос ')]/a");
@@ -38,6 +37,4 @@ public class CreatingTaskForm {
     public static SelenideElement frameInputField(String text) {
         return $x("//label[contains(text(),'" + text + "')]//following-sibling::div//iframe");
     }
-
-
 }

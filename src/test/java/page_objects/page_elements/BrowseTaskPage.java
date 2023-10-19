@@ -23,6 +23,4 @@ public class BrowseTaskPage {
     public static SelenideElement confirmedButton = $x("//span[contains(text(),'Подтверждено')]//ancestor::a");
 
     public static SelenideElement confirmedButtonForm = $x("//input[@value='Подтверждено' and @id='issue-workflow-transition-submit']");
-
-
 }

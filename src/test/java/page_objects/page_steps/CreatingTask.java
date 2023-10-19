@@ -40,7 +40,6 @@ public class CreatingTask extends CreatingTaskForm {
 
     @Step("Переводим созданную задачу по статусам.")
     public static void switchingTask() {
-
         buttonClick(tasksButton, "Задачи");
         buttonClick(reportedByMeButton, "Сообщенные мной");
         buttonClick(taskLink, "Ссылка на задачу");

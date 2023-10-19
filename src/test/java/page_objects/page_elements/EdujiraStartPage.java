@@ -15,6 +15,4 @@ public class EdujiraStartPage {
     public static SelenideElement battonLogin = $x("//input[@id='login' and @value='Войти']");
 
     public static SelenideElement bodyStartPage = $x("//body[@id='jira']");
-
-
 }

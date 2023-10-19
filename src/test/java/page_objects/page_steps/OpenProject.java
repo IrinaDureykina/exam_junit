@@ -12,12 +12,10 @@ public class OpenProject extends HomePage {
 
     @Step("Заходим в проект {nameProject}")
     public static void openProject(String nameProject) {
-
         buttonClick(openProjectButton, "Project Button");
         buttonClick(openProjectLink(nameProject), "Project Link");
         buttonClick(allIssues, "Задачи");
         saveScreenshot("Заходим в проект: " + nameProject);
-
     }
 
     @Step("Получаем количество задач в проекте и проверяем наличие значения в поле")

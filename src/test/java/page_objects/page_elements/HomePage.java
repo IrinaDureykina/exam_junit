@@ -30,6 +30,4 @@ public class HomePage {
     public static SelenideElement tasksButton = $x("//a[@id='find_link' and @title='Поиск и просмотр недавних задач']");
 
     public static SelenideElement reportedByMeButton = $x("//a[@id='filter_lnk_reported_lnk' and contains(text(),'Сообщенные мной')]");
-
-
 }
