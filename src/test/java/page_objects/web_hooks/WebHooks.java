@@ -13,8 +13,6 @@ import org.openqa.selenium.OutputType;
 
 public class WebHooks {
 
-
-
     @BeforeEach
     public void allureSelenideListener() {
         String listenerName = "Allureselenide";
@@ -30,7 +28,6 @@ public class WebHooks {
     public static byte[] saveScreenshot(String nameScreenshot) {
         return Selenide.screenshot(OutputType.BYTES);
     }
-
 
     @AfterEach
     public void afterTest() {
